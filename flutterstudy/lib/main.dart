@@ -1,11 +1,27 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '3.ListView.dart';
+import '4.GridView.dart';
+import '5.RowWidget.dart';
+
+
 
 // void main() => runApp(NQSTest());
 // void main() => runApp(TextWidgetExample());
 // void main() => runApp(ImageTest());
 // void main() => runApp(ContainerExample());
-void main() => runApp(ListViewExample());
+
+//静态列表
+// void main() => runApp(ListViewExample());
+
+//动态列表
+// void main() => runApp(DynamicListView(
+//   items: List<String>.generate(100, (i)=>'第${i}行'))
+// );
+
+//网格视图
+// void main() => runApp(GridViewExample());
+void main() => runApp(RowExample());
 
 //hello world
 class NQSTest extends StatelessWidget {
@@ -208,37 +224,8 @@ class ContainerExample  extends StatelessWidget {
   }
 }
   
-  class ListViewExample extends StatelessWidget {
 
-  @override
-  Widget build(BuildContext context){
-    return MaterialApp(
-      home: Scaffold(
-        appBar: new AppBar(title: new Text("listview标题"),),
-        body: ListView(
-          //列表方向，横向/竖向
-          scrollDirection: Axis.vertical,
-          children: <Widget>[
-            ListTile(
-              leading: Icon(Icons.access_alarm),
-              title: Text('闹钟icon'),
-            ),
-            ListTile(
-              leading: Icon(Icons.airplanemode_active),
-              title: Text('飞机icon'),
-            ),
-            Image.network(
-              'https://tva2.sinaimg.cn/crop.0.0.499.499.180/5a069252tw1egot41azscj20dw0dwwhm.jpg',
-              height: 100,
-              alignment: Alignment.centerLeft,
-              repeat: ImageRepeat.repeatX,
-              )
-          ],
-        )
-      ),
-    );
-  }
-}
+  
 
 
 
