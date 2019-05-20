@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '3.ListView.dart';
 import '4.GridView.dart';
 import '5.RowWidget.dart';
-
-
+import '6.ColumnWidget.dart';
+import '7.StackWidget.dart';
 
 // void main() => runApp(NQSTest());
 // void main() => runApp(TextWidgetExample());
@@ -21,7 +21,21 @@ import '5.RowWidget.dart';
 
 //网格视图
 // void main() => runApp(GridViewExample());
-void main() => runApp(RowExample());
+
+//rowWidget组件 横向布局
+// void main() => runApp(RowExample());
+
+//columnWidget 纵向布局
+// void main() => runApp(ColumnExample());
+
+//stackWidget 层叠布局
+void main() => runApp(StackExample());
+
+
+
+
+
+
 
 //hello world
 class NQSTest extends StatelessWidget {

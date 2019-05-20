@@ -5,7 +5,7 @@ class RowExample extends StatelessWidget {
   Widget build(BuildContext context){
     return MaterialApp(
       home: Scaffold(
-        appBar: new AppBar(title: new Text("横向布局")),
+        appBar: new AppBar(title: new Text("标题")),
         // body:StaticRow(),//静态布局
         // body: DynamicRow(),//动态布局
         body: DynamicAndStaticRow(),//动态静态混合布局

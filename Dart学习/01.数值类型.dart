@@ -55,14 +55,31 @@ void example1() {
   } 
   //------列表list------  
   void example4() {
-
+    List<int> listOne = [1,2,3,4];
+    print('数组长度${listOne.length}');
+    listOne.add(5);
+    listOne.remove(5);
+    listOne.contains(5);
   }
-  //------键值对map------   
+  //------集合set-------
   void example5() {
+    //集合：无序数组，元素不重复
+    // Set<String> numberSet = {"niu","qing","shan"};
+    // assert(numberSet.length == 5);
+  }
 
+  //------键值对map------   
+  void example6() {
+    Map<int,String> nqs = {1:'one',2:'two'};
+    nqs[1];
+    nqs.entries;
+    nqs.keys;
+    nqs.values;
+    nqs.containsKey(1);
+    nqs.containsValue('one');
   }
   //------runes、symbols------
-  void example6() {
+  void example7() {
 
   }
 
