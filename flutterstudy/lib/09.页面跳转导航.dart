@@ -48,11 +48,4 @@ class SecondPage extends StatelessWidget {
   }
 }
 
-class  extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      
-    );
-  }
-}
+
