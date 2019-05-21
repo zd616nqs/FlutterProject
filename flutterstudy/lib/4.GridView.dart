@@ -8,6 +8,9 @@ import 'package:flutter/material.dart';
   @override
   Widget build(BuildContext context){
     return MaterialApp(
+      theme: ThemeData(
+        primaryColor: Colors.yellowAccent,
+      ),
       home: Scaffold(
         appBar: new AppBar(title: new Text("listview标题")),
         //------gridView新版写法------

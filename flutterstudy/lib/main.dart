@@ -13,15 +13,12 @@ import '8.CardWidget.dart';
 import '09.页面跳转导航.dart';
 import '10.页面间传值回调.dart';
 
-
-
-
 // void main() => runApp(HelloWorld()); //HelloWorld 
-// void main() => runApp(TextWidgetExample()); //text组件
+void main() => runApp(TextWidgetExample()); //text组件
 // void main() => runApp(ImageTest()); //图片组件
 // void main() => runApp(ContainerExample()); //Container和decoration
 // void main() => runApp(ListViewExample()); //静态列表
-void main() => runApp(DynamicListView()); //动态列表
+// void main() => runApp(DynamicListView()); //动态列表
 // void main() => runApp(GridViewExample()); //网格视图
 // void main() => runApp(RowExample()); //横向布局 rowWidget组件 
 // void main() => runApp(ColumnExample()); //纵向布局 columnWidget
