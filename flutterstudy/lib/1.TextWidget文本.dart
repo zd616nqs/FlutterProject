@@ -2,6 +2,32 @@ import 'package:flutter/material.dart';
 
 
 
+
+//hello world
+class HelloWorld extends StatelessWidget {
+  @override
+  Widget build(BuildContext context){
+    return MaterialApp(
+      title: '牛青山示例',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('大标题'),
+        ),
+        body: Center(
+          child: Column(
+            children: <Widget>[
+              Text('hello world11'),
+              Text('hello world22'),
+              Text('hello world33'),
+            ],
+          )
+        ),
+      ),
+    );
+  }
+}
+
+
 //Text组件
 class TextWidgetExample extends StatelessWidget {
 

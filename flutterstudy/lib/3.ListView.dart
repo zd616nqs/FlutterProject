@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 
 //----------1.静态列表listview-----------------
-  class ListViewExample extends StatelessWidget {
+
+class StaticListExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context){
@@ -38,8 +39,18 @@ import 'package:flutter/material.dart';
 
 //----------2.动态列表listview-----------------
 class DynamicListView extends StatelessWidget {
+  Widget build(BuildContext context){
+    return MaterialApp(
+      title: '动态列表',
+      home: ListView111(
+        items: List<String>.generate(100, (i)=>'第${i}行'))
+      );
+  } 
+}
+
+class ListView111 extends StatelessWidget {
   final List<String> items;
-  DynamicListView({Key key,@required this.items}):super(key:key);//接收参数
+  ListView111({Key key,@required this.items}):super(key:key);//接收参数
 
   @override
   Widget build(BuildContext context){
