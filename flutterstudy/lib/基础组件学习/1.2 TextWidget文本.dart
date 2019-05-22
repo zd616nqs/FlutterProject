@@ -36,6 +36,7 @@ class TextWidgetExample extends StatelessWidget {
   @override
   Widget build(BuildContext context){
     return MaterialApp(
+      debugShowCheckedModeBanner:false,
       home: Scaffold(
         backgroundColor: Colors.grey,
         body: Center(
@@ -67,14 +68,9 @@ class TextWidgetExample extends StatelessWidget {
                     decoration: TextDecoration.lineThrough ,
                     //横线样式： solid单横线  double双横线 dotted点线 dashed虚线 wavy正弦曲线
                     decorationStyle: TextDecorationStyle.wavy,
-                  ),
+                  ), 
                 ),
-                SizedBox(height: 30),
-                Image.network(imageUrl2,width: 300,height: 300),
-                Text(
-                  '第一条数据',
-                  style: Theme.of(context).textTheme.subtitle,//使用系统样式
-                ),
+                
                 
               ],
             ),
