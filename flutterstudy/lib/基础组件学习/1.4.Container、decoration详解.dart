@@ -2,14 +2,23 @@
 import 'package:flutter/material.dart';
 
 
-//container属性了解  1.edge边距 2.decoration装饰器
+//container属性了解  1.edge边距 2.container容器 3.decoration装饰器
 class ContainerExample  extends StatelessWidget {
+ /* /////////////////一、边距/////////////////
+  * EdgeInsets.only(left: 10.0)  单独设置一个方向的边距
+  * EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0, bottom: 10.0)  分别设置一个方向的边距
+  * EdgeInsets.fromLTRB(left, top, right, bottom) 单独设置每个方向边距
+  * EdgeInsets.all()四个方向统一边距
+  * EdgeInsets.symmetric(horizontal: 10.0) 水平方向边距
+  * EdgeInsets.symmetric(vertical: 10.0) 垂直方向边距
+  */
 
   @override
   Widget build(BuildContext context){
     return MaterialApp(
       home: Scaffold(
         body: Center(
+          //////////////////二、Container容器//////////////////////////
           child:Container(
             child: Text("测试对齐方式",style:TextStyle(fontSize: 30.0,color: Color.fromRGBO(123, 212, 4, 1))),
             //对齐方式
@@ -28,22 +37,14 @@ class ContainerExample  extends StatelessWidget {
               maxWidth: 400,//最大宽度
             ),
 
-            /* /////////////////边距/////////////////
-             * EdgeInsets.only(left: 10.0)  单独设置一个方向的边距
-             * EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0, bottom: 10.0)  分别设置一个方向的边距
-             * EdgeInsets.fromLTRB(left, top, right, bottom) 单独设置每个方向边距
-             * EdgeInsets.all()四个方向统一边距
-             * EdgeInsets.symmetric(horizontal: 10.0) 水平方向边距
-             * EdgeInsets.symmetric(vertical: 10.0) 垂直方向边距
-             */
-            padding: EdgeInsets.only(bottom: 10.0),//内边距
+            padding: EdgeInsets.only(bottom: 10.0),//child组件相对于container的内边距
             margin: EdgeInsets.only(left: 20.0),//外边距
 
 
 
-            //////////////////装饰器//////////////////////////
-            //decoration在子child的后面面绘制
-            //foregroundDecoration在子child的前面绘制
+            //////////////////三、decoration装饰器//////////////////////////
+            //*** decoration在child组件的后面面绘制
+            //*** foregroundDecoration在child组件的前面绘制
             decoration: new BoxDecoration(
               //----1.color:颜色,如果这个颜色指定了，最外层的颜色就不能用了，否则会报错，二者不可兼容。
               //----2.image:背景图片,在color之下，gradient之上
@@ -86,8 +87,7 @@ class ContainerExample  extends StatelessWidget {
                   bottomRight: Radius.circular(10)
                 )
                */
-              
-
+              borderRadius: BorderRadius.circular(10),
               //----7.backgroundBlendMode:混合模式，应用于color或gradient属性，如果这两个属性没有设置，则无效
               backgroundBlendMode: BlendMode.darken,
               /*
@@ -107,3 +107,6 @@ class ContainerExample  extends StatelessWidget {
   }
 }
   
+
+
+

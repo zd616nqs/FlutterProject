@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 //hello world
 class HelloWorld extends StatelessWidget {
+
   @override
   Widget build(BuildContext context){
     return MaterialApp(
@@ -38,20 +39,20 @@ class TextWidgetExample extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner:false,
       home: Scaffold(
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.grey[100],
         body: Center(
           child: Container(
             child: Column(
               children: <Widget>[
                 SizedBox(height: 80),
-                Image.network(imageUrl1,width: 300,height: 300),
+                //---------1.使用系统样式---------
                 Text(
                   '第一条数据',
-                  style: Theme.of(context).textTheme.subtitle,//使用系统样式
+                  style: Theme.of(context).textTheme.subtitle,
                 ),
                 
                 SizedBox(height: 30.0),
-                Image.network(imageUrl2,width: 300,height: 300),
+                //---------2.Text组件---------
                 Text(
                   //文字
                   "第二条数据",
@@ -70,7 +71,36 @@ class TextWidgetExample extends StatelessWidget {
                     decorationStyle: TextDecorationStyle.wavy,
                   ), 
                 ),
-                
+                SizedBox(height: 30.0),
+                //---------3.RichText富文本---------
+                RichText(
+                  text: TextSpan(
+                    text: '牛青山',
+                    style: TextStyle(
+                      color: Colors.lightBlue,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: '到此',
+                        style: TextStyle(
+                          color: Colors.red,
+                          fontSize: 15.0,
+                          fontWeight: FontWeight.normal,
+                        )
+                      ),
+                      TextSpan(
+                        text: '一游',
+                        style: TextStyle(
+                          color: Colors.purple,
+                          fontSize: 25.0,
+                          fontWeight: FontWeight.normal,
+                        )
+                      ),
+                    ]
+                  ),
+                )
                 
               ],
             ),

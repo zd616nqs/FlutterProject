@@ -10,7 +10,7 @@ class DrawerExample extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text('标题栏'),
-          //------设置左侧按钮------
+          //------设置左侧按钮，点击打开抽屉------
           leading: Builder(
             builder: (context)=>IconButton(
               icon: Icon(Icons.call_split),

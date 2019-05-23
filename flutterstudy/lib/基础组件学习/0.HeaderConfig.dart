@@ -16,6 +16,7 @@ import '1.9 StackWidget.dart';
 import '1.10 CardWidget.dart';
 import '2.1 AppBar、TabBar.dart';
 import '2.2 Drawer抽屉.dart';
+import '2.3 BottomNavigationBar底部导航栏.dart';
 import '3.1 页面跳转导航.dart';
 import '3.2 页面间传值回调.dart';
 
@@ -31,8 +32,9 @@ class BaseWidgetStudy extends StatelessWidget {
     // return ImageTest(); //图片组件
     // return AppBarExample();//AppBar组件
     // return TabBarExample();//TabBar组件
-    return DrawerExample();
-    // return ContainerExample(); //Container和decoration
+    // return DrawerExample();//抽屉
+    // return BottomNavigationBarExample();//底部bar
+    return ContainerExample(); //Container和decoration
     // return ListViewExample(); //静态列表
     // return DynamicListView(); //动态列表
     // return GridViewExample(); //网格视图
