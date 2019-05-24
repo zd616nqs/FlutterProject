@@ -1,6 +1,24 @@
 import 'package:flutter/material.dart';
 
 
+/**
+ * 本地图片的放置、声明引用、使用
+ * 1.放置，fultter遵循了基于像素密度的放置格式，比如声明了一个放图片的父文件夹images，倍图放在如下的路径
+ * images/my_icon.png       // Base: 1.0x image
+ * images/2.0x/my_icon.png  // 2.0x image
+ * images/3.0x/my_icon.png  // 3.0x image
+ * 2.声明使用
+ * 在pubspec.yaml文件中声明引人的图片
+ * assets:
+ *   - images/my_icon.png  声明单个文件
+ *   - images/   声明整个文件夹
+ * 
+ * 3.使用
+ * 方法一：AssetImage("images/my_icon.jpeg");
+ * 方法二：Image.asset("images/my_icon.png");
+ */
+
+
 
 //image组件使用
 class ImageTest extends StatelessWidget {

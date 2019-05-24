@@ -1,5 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:http/http.dart' as http;
+
 
 
 //container属性了解  1.edge边距 2.container容器 3.decoration装饰器
@@ -15,7 +18,7 @@ class ContainerExample  extends StatelessWidget {
 
   @override
   Widget build(BuildContext context){
-    return MaterialApp(
+    return CupertinoApp(
       home: Scaffold(
         body: Center(
           //////////////////二、Container容器//////////////////////////

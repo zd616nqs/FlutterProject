@@ -59,6 +59,9 @@ class ListView111 extends StatelessWidget {
         appBar: AppBar(
           title: Text('大标题'),
         ),
+
+        //ListView.builder 接受两个主要参数：列表的初始长度，和一个 ItemBuilder 方法
+        //ItemBuilder 方法和 cellForItemAt 代理方法非常类似，它接受一个位置，并且返回在这个位置上你希望渲染的 cell
         body: ListView.builder(
           itemCount: items.length,//总共多少条
           itemBuilder:(context,index) {
