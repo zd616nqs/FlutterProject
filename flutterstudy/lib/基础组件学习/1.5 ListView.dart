@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
  *    1.在setState方法中新建一个list，把旧list数据拷贝给新的list
  *    2.使用ListView.Builder来构造
  * 当有大量的数据时，推荐、高效的方法时使用ListView.Builder来构造，这样只会动态的修改部分数据，
- * /
+ */
 
 
 

@@ -52,8 +52,12 @@ class ContainerExample  extends StatelessWidget {
               //----1.color:颜色,如果这个颜色指定了，最外层的颜色就不能用了，否则会报错，二者不可兼容。
               //----2.image:背景图片,在color之下，gradient之上
               //----3.渐变色，在image之下显示，如果指定了渐变色，color属性就无效了
+              //RadialGradient:镜像渐变  LinearGradient:线性渐变
               gradient: const LinearGradient(
-                colors: [Colors.lightBlue,Colors.purple]
+                colors: [Colors.lightBlue,Colors.purple],
+                //渐变方向，默认从左到右
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
               ),
               //----4.boxShadow 阴影---
               boxShadow: [
