@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 
 import '1.0 常用类型和基本定义.dart';
-import '1.1 Material介绍.dart';
+import '1.1 Material、Scaffold介绍.dart';
 import '1.2 TextWidget文本.dart';
 import '1.3 ImageWidget图片.dart';
 import '1.4.Container、decoration详解.dart';
