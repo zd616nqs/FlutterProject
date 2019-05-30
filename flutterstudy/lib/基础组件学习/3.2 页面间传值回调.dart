@@ -37,7 +37,9 @@ class  ProductList extends StatelessWidget {
           return ListTile(
             title: Text('${productsData[index].produtctTitle} ，点击跳转详情页'),
             onTap: (){
-              _navigateToDetail(context,index);//跳转详情页，并且等待回调结果
+              //跳转详情页，并且等待回调结果
+              // _navigateToDetail(context,index);//方式一
+              // _navigateToDetail2(context, index);//方式二
             },
           );
         },
@@ -45,15 +47,33 @@ class  ProductList extends StatelessWidget {
     );
   }
 
-  //内部私有方法，跳转并从详情页返回的回调
+  //------内部私有方法，跳转并从详情页返回的回调------
+  //方式一：async/await组合接收
   _navigateToDetail(BuildContext context ,int index) async{
+    
     final result = await Navigator.push(
+    context, 
+    MaterialPageRoute(
+      builder: (context) => new ProductDetailPage(productDetailData:productsData[index])
+    ));
+    //类似于toast显示回调结果
+    Scaffold.of(context).showSnackBar(SnackBar(content: Text('$result')));
+
+    
+  }
+  //方式二：.then接收
+  _navigateToDetail2(BuildContext context, int index) {
+
+    Navigator.push(
       context, 
       MaterialPageRoute(
-        builder: (context) => new ProductDetailPage(productDetailData:productsData[index])
-      ));
-      //类似于toast显示回调结果
-      Scaffold.of(context).showSnackBar(SnackBar(content: Text('$result')));
+        builder: (context){
+          return new ProductDetailPage(productDetailData:productsData[index]);
+        }
+      ) 
+    ).then((result2){
+        Scaffold.of(context).showSnackBar(SnackBar(content: Text('$result2')));
+    });
   }
 }
 
