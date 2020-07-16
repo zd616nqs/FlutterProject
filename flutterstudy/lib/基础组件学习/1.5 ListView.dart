@@ -60,7 +60,7 @@ class DynamicListView extends StatelessWidget {
 
 class ListView111 extends StatelessWidget {
   final List<String> items;
-  ListView111({Key key,@required this.items}):super(key:key);//接收参数
+  ListView111({Key key, this.items}):super(key:key);//接收参数
 
   @override
   Widget build(BuildContext context){

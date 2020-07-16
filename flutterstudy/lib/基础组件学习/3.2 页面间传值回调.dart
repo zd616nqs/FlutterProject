@@ -25,7 +25,7 @@ class PushWithPopWithCallbackExample extends StatelessWidget {
 //-------列表接收参数-------
 class  ProductList extends StatelessWidget {
   final List<Product> productsData;//定义接收参数(数组)
-  ProductList({Key key,@required this.productsData}):super(key:key);
+  ProductList({Key key, this.productsData}):super(key:key);
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +81,7 @@ class  ProductList extends StatelessWidget {
 //-------商品详情页面-------
 class ProductDetailPage extends StatelessWidget {
   final Product productDetailData;
-  ProductDetailPage({Key key,@required this.productDetailData}):super(key:key);
+  ProductDetailPage({Key key, this.productDetailData}):super(key:key);
 
   Widget build(BuildContext context){
     return Scaffold(

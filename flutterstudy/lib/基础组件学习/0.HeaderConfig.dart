@@ -34,10 +34,10 @@ class BaseWidgetStudy extends StatelessWidget {
     // return TabBarExample();//TabBar组件
     // return DrawerExample();//抽屉
     // return BottomNavigationBarExample();//底部bar
-    return ContainerExample(); //Container和decoration
+    // return ContainerExample(); //Container和decoration
     // return ListViewExample(); //静态列表
     // return DynamicListView(); //动态列表
-    // return GridViewExample(); //网格视图
+    return GridViewExample(); //网格视图
     // return RowExample(); //横向布局 rowWidget组件 
     // return ColumnExample(); //纵向布局 columnWidget
     // return StackExample(); //层叠布局 stackWidget 
