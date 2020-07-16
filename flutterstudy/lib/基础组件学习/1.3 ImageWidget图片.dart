@@ -23,11 +23,15 @@ import 'package:flutter/material.dart';
 //image组件使用
 class ImageTest extends StatelessWidget {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
+    return _example();
+  }
+
+  _example(){
     return MaterialApp(
-      title: '牛青山示例',
+      
+      
       home: Scaffold(
-        
         body: Center(
           child: Container(
             width: 300,
@@ -48,12 +52,13 @@ class ImageTest extends StatelessWidget {
               alignment: Alignment.center,
               
               color: Colors.yellow,
-              colorBlendMode: BlendMode.darken,
-              repeat: ImageRepeat.repeat,
+              colorBlendMode: BlendMode.exclusion,
+              repeat: ImageRepeat.repeatX,
               ),            
           )
         ),
       ),
     );
   }
+  
 }

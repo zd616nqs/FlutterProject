@@ -39,19 +39,22 @@ class TextWidgetExample extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner:false,
       home: Scaffold(
-        backgroundColor: Colors.grey[100],
+        backgroundColor: Colors.grey[500],
         body: Center(
           child: Container(
             child: Column(
               children: <Widget>[
-                SizedBox(height: 80),
+                SizedBox(height: 200,child: Container(color: Colors.red)),
                 //---------1.使用系统样式---------
                 Text(
                   '第一条数据',
-                  style: Theme.of(context).textTheme.subtitle,
+                  style:Theme.of(context).accentTextTheme.display1
+                  // style: Theme.of(context).textTheme.subtitle,
                 ),
                 
-                SizedBox(height: 30.0),
+
+
+                SizedBox(height: 80,child: Container(color: Colors.yellow)),
                 //---------2.Text组件---------
                 Text(
                   //文字
@@ -60,6 +63,7 @@ class TextWidgetExample extends StatelessWidget {
                   textAlign: TextAlign.center,
                   //裁剪方式：clip直接裁剪文字   ellipsis裁剪文字后加... fade从上到下颜色渐变
                   overflow: TextOverflow.clip,
+
                   style: TextStyle(
                     //字号：最好为float型，int不报错
                     fontSize: 20,
@@ -71,7 +75,9 @@ class TextWidgetExample extends StatelessWidget {
                     decorationStyle: TextDecorationStyle.wavy,
                   ), 
                 ),
-                SizedBox(height: 30.0),
+                
+                
+                SizedBox(height: 30,child: Container(color: Colors.yellow)),
                 //---------3.RichText富文本---------
                 RichText(
                   text: TextSpan(

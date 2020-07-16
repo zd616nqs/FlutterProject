@@ -18,7 +18,7 @@ class Stack111 extends StatelessWidget {
 
     var stackView = Stack(
       //设置子元素的相对对齐方式:层叠的第二个元素相对于第一个元素的位置
-      alignment: const FractionalOffset(0.5, 0.8),
+      alignment: const FractionalOffset(0.8, 0.5),
       children: <Widget>[
         CircleAvatar(
           backgroundImage: NetworkImage('https://tva2.sinaimg.cn/crop.0.0.499.499.180/5a069252tw1egot41azscj20dw0dwwhm.jpg') ,
@@ -28,7 +28,7 @@ class Stack111 extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.lightBlue,
           ),
-          padding: EdgeInsets.all(10.0),
+          padding: EdgeInsets.all(10.0),//child组件相对于container的内边距
           child: Text('来来来小牛仔')
         ),
         //Positioned指定位置的控件，绝对位置

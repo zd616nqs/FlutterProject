@@ -100,14 +100,14 @@ void listExample (){
 
 void MapExample (){
   // 创建Map 
-  var language = {'fisrt': 'dart', 'second': 'java'};
+  var language = {'fisrt':'dart', 'second':'java'};
   // 创建不可变的 Map
-  var constLanguage = const {'fisrt': 'dart', 'second': 'java'};
+  var constLanguage = const {'fisrt':'dart', 'second':'java'};
   // 通过构造器创建
   var initLanguage = new Map();
 
   // 创建Map 
-  var map = {'fisrt': 'dart', 'second': 'java'};
+  var map = {'fisrt':'dart', 'second':'java'};
   // 获取长度
   print(map.length);    // 输出结果：2
   // 判断是否为空
@@ -126,7 +126,7 @@ void MapExample (){
   print(map);         // 输出结果：{fisrt: dart, second: java, third: key}
 
   // 循环打印 代码提示：Map.forEach((String, String) → void f) → void
-  map.forEach( (key, value) =>  getMap(key, value) );
+  map.forEach( (key2, value) =>  getMap(key2, value) );
 }
 
 

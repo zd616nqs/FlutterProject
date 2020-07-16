@@ -35,14 +35,14 @@ class BaseWidgetStudy extends StatelessWidget {
     // return DrawerExample();//抽屉
     // return BottomNavigationBarExample();//底部bar
     // return ContainerExample(); //Container和decoration
-    // return ListViewExample(); //静态列表
+    // return StaticListExample(); //静态列表
     // return DynamicListView(); //动态列表
-    return GridViewExample(); //网格视图
+    // return GridViewExample(); //网格视图
     // return RowExample(); //横向布局 rowWidget组件 
     // return ColumnExample(); //纵向布局 columnWidget
     // return StackExample(); //层叠布局 stackWidget 
     // return CardExample(); //卡片布局 cardView 
     // return PushAndPopExample(); //页面跳转跳回
-    // return PushWithPopWithCallbackExample(); //页面间传值、回调
+    return PushWithPopWithCallbackExample(); //页面间传值、回调
   }
 }

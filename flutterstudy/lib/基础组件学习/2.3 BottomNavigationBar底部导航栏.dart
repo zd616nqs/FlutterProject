@@ -31,6 +31,7 @@ class _BottomNavgationBarDemoState extends State<BottomNavgationBarDemo> {
   void _onTapHandel(int index){
     setState(() {
       _currentIndex = index;
+      print("当前选中第${_currentIndex+1}个");
     });
   }
 

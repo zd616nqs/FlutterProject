@@ -32,7 +32,7 @@ class GridVersionNew extends StatelessWidget {
       crossAxisCount: 2,
       mainAxisSpacing: 10.0,
       crossAxisSpacing: 20.0,
-      childAspectRatio: 0.7,
+      childAspectRatio: 0.8,
       children: <Widget>[
         Image.network('https://p1.meituan.net/movie/c63849c7a9de360a7b192bc322792a111705236.jpg@160w_220h_1e_1c',fit: BoxFit.cover),
           Image.network('https://p0.meituan.net/moviemachine/f7d2ad70eb79d6d9b8a197713db9b8c41711752.jpg@160w_220h_1e_1c',fit: BoxFit.cover),

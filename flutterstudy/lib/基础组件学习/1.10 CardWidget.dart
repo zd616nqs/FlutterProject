@@ -24,13 +24,13 @@ class Card111 extends StatelessWidget {
             subtitle: Text('电话：111111111'),
             leading:  new Icon(Icons.account_circle,color:Colors.lightBlue),
           ),
-          new Divider(),
+          new Divider(thickness: 0.5,indent: 10,endIndent: 10),
           new ListTile(
             title: Text('赵双琳',style: TextStyle(color: Colors.grey,fontSize: 25.0,fontWeight: FontWeight.bold),),
             subtitle: Text('电话：222222222'),
             leading:  new Icon(Icons.account_circle,color:Colors.lightBlue),
           ),
-          new Divider(),
+          new Divider(thickness: 0.5,indent: 10,endIndent: 10),
         ],
       ),
     );

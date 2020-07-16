@@ -34,8 +34,8 @@ class Test1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Colors.white54,
-        padding: EdgeInsets.all(80),
+        color: Colors.white,
+        padding: EdgeInsets.all(60),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -56,13 +56,15 @@ class Test2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
+        // padding: EdgeInsets.symmetric(vertical:50,horizontal: 20),
         padding: EdgeInsets.zero,
         children: <Widget>[
           //------设置抽屉的表头------
           DrawerHeader(
+            padding: EdgeInsets.symmetric(vertical:0,horizontal: 20),
             child: Text('来来来小牛仔',style: TextStyle(fontSize: 30.0)),
             decoration: BoxDecoration(
-              color: Colors.grey[300],
+              color: Colors.grey[400],
             ),
           ),
           //------设置一个用户信息的表头------
@@ -74,7 +76,7 @@ class Test2 extends StatelessWidget {
             ),
             //设置背景图片(背景色、背景图、填充方式)
             decoration: BoxDecoration(
-              color: Colors.yellow[800],//decoration容器的背景色
+              color: Colors.red,//decoration容器的背景色
               image: DecorationImage(
                 image: NetworkImage(bgImg),//背景图片
                 fit: BoxFit.fill,//填充模式
@@ -98,7 +100,8 @@ class Test2 extends StatelessWidget {
             trailing: Icon(Icons.settings),
           ),
           ListTile(
-            title: Text('关闭',textAlign: TextAlign.right,style: TextStyle(fontSize:16.0)),
+            title: Text('关闭',textAlign: TextAlign.left,style: TextStyle(fontSize:16.0)),
+            leading: Icon(Icons.ac_unit),
             trailing: Icon(Icons.close),
             //------设置关闭action------
             onTap: ()=> Navigator.pop(context),

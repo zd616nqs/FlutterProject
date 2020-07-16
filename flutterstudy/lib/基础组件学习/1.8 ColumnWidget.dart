@@ -16,6 +16,7 @@ class Column111 extends StatelessWidget {
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
+      mainAxisAlignment: MainAxisAlignment.end,
       children: <Widget>[
         Text('就流口水的骄傲'),
         Text('士大夫'),

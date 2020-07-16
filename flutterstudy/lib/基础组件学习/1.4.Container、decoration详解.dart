@@ -23,13 +23,14 @@ class ContainerExample  extends StatelessWidget {
         body: Center(
           //////////////////二、Container容器//////////////////////////
           child:Container(
+
             child: Text("测试对齐方式",style:TextStyle(fontSize: 30.0,color: Color.fromRGBO(123, 212, 4, 1))),
             //对齐方式
-            alignment: Alignment.bottomCenter,
+            alignment: Alignment.topLeft,
             //容器高宽
-            width: 375,
+            width: 260,
             //容器高宽
-            height: 300,
+            height: 180,
             //容器背景色
             // color: Colors.blueGrey,
             //约束:优先级比width和height高
@@ -40,10 +41,10 @@ class ContainerExample  extends StatelessWidget {
               maxWidth: 400,//最大宽度
             ),
 
-            padding: EdgeInsets.only(bottom: 10.0),//child组件相对于container的内边距
-            margin: EdgeInsets.only(left: 20.0),//外边距
+            padding: EdgeInsets.only(top: 15.0),//child组件相对于container的内边距
+            margin: EdgeInsets.only(left: 10.0),//外边距
 
-
+            
 
             //////////////////三、decoration装饰器//////////////////////////
             //*** decoration在child组件的后面面绘制
@@ -52,7 +53,7 @@ class ContainerExample  extends StatelessWidget {
               //----1.color:颜色,如果这个颜色指定了，最外层的颜色就不能用了，否则会报错，二者不可兼容。
               //----2.image:背景图片,在color之下，gradient之上
               //----3.渐变色，在image之下显示，如果指定了渐变色，color属性就无效了
-              //RadialGradient:镜像渐变  LinearGradient:线性渐变
+              //RadialGradient:径向渐变  LinearGradient:线性渐变
               gradient: const LinearGradient(
                 colors: [Colors.lightBlue,Colors.purple],
                 //渐变方向，默认从左到右
@@ -95,6 +96,8 @@ class ContainerExample  extends StatelessWidget {
                 )
                */
               borderRadius: BorderRadius.circular(10),
+
+
               //----7.backgroundBlendMode:混合模式，应用于color或gradient属性，如果这两个属性没有设置，则无效
               backgroundBlendMode: BlendMode.darken,
               /*

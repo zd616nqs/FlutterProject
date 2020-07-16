@@ -16,7 +16,7 @@ class PushWithPopWithCallbackExample extends StatelessWidget {
     return MaterialApp(
       title: '导航数据传递和接收',
       home: ProductList(
-        productsData:List.generate(20, (i)=>Product('商品名称:$i','商品描述编号为$i'))
+        productsData:List.generate(20, (i)=>Product('商品名称:$i','商品编号:$i'))
       ),
     );
   }
@@ -35,10 +35,10 @@ class  ProductList extends StatelessWidget {
         itemCount: productsData.length,
         itemBuilder: (context,index){
           return ListTile(
-            title: Text('${productsData[index].produtctTitle} ，点击跳转详情页'),
+            title: Text('${productsData[index].produtctTitle},${productsData[index].produtctDesStr}, 点击跳转详情页'),
             onTap: (){
               //跳转详情页，并且等待回调结果
-              // _navigateToDetail(context,index);//方式一
+              _navigateToDetail1(context,index);//方式一
               // _navigateToDetail2(context, index);//方式二
             },
           );
@@ -49,7 +49,7 @@ class  ProductList extends StatelessWidget {
 
   //------内部私有方法，跳转并从详情页返回的回调------
   //方式一：async/await组合接收
-  _navigateToDetail(BuildContext context ,int index) async{
+  _navigateToDetail1(BuildContext context ,int index) async{
     
     final result = await Navigator.push(
     context, 

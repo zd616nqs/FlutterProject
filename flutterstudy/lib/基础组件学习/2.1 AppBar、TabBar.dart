@@ -15,7 +15,7 @@ class AppBarExample extends StatelessWidget {
 
           //------设置左侧按钮------
           leading: IconButton(
-            icon: Icon(Icons.call_split),//1.按钮图标
+            icon: Icon(Icons.ac_unit),//1.按钮图标
             tooltip: '这个按钮的作用是分享',//2.按压按钮时的提示文字
             onPressed: (){
               debugPrint('点击了分享按钮');
@@ -77,7 +77,7 @@ class TabBarExample extends StatelessWidget {
               indicatorColor: Colors.red,
               indicatorSize: TabBarIndicatorSize.label,
               indicatorWeight: 5,
-
+              
               tabs: <Widget>[
                 Tab(icon: Icon(Icons.local_mall)),
                 Tab(icon: Icon(Icons.local_bar)),

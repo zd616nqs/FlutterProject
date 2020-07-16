@@ -4,6 +4,11 @@ void main() {
   //内置类型:
   //字符串string
   example1();
+  example2();
+  example3();
+  example4();
+  example5();
+  example6();
   //布尔型bool 
   //列表list  
   //键值对map   
@@ -15,9 +20,11 @@ void main() {
 void example1() {
   num a = 10;
   a = 22.5;
-  
+  print(a);
+
   int b = 20;
   // b = 20.5;//错误
+  print(b); 
 
   double c = 11.5;
   c = 11;
@@ -60,6 +67,7 @@ void example1() {
     listOne.add(5);
     listOne.remove(5);
     listOne.contains(5);
+    print(listOne.contains(3));
   }
   //------集合set-------
   void example5() {
@@ -71,12 +79,13 @@ void example1() {
   //------键值对map------   
   void example6() {
     Map<int,String> nqs = {1:'one',2:'two'};
-    nqs[1];
-    nqs.entries;
-    nqs.keys;
-    nqs.values;
-    nqs.containsKey(1);
-    nqs.containsValue('one');
+    
+    print(nqs[1]);
+    print(nqs.entries);
+    print(nqs.keys);
+    print(nqs.values);
+    print(nqs.containsKey(1));
+    print(nqs.containsValue('one'));
   }
   //------runes、symbols------
   void example7() {
