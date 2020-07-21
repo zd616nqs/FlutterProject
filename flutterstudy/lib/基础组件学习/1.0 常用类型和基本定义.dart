@@ -8,6 +8,8 @@
 
 //-------类型转换-------
 // String -> int
+import 'package:flutter/widgets.dart';
+//String -> int
 var one = int.parse('1');
 // String -> double
 var onePointOne = double.parse('1.1');
@@ -48,9 +50,33 @@ void StringExample (){
   String str7 = "算了，还是正常一点" + "，使用 + 来拼接";
 }
 
-
 void listExample (){
   //-------List列表数组-------
+  /*
+List里面常用的属性和方法：
+    常用属性：
+        length          长度
+        reversed        翻转
+        isEmpty         是否为空
+        isNotEmpty      是否不为空
+    常用方法：  
+        add         增加
+        addAll      拼接数组
+        indexOf     查找  传入具体值
+        remove      删除  传入具体值
+        removeAt    删除  传入索引值
+        fillRange   修改   
+        insert(index,value);            指定位置插入    
+        insertAll(index,list)           指定位置插入List
+        toList()    其他类型转换成List  
+        join()      List转换成字符串
+        split()     字符串转化成List
+        forEach   
+        map
+        where
+        any
+        every
+*/
   // 使用构造创建
   var listNew = new List();
   //创建一个int类型的list
@@ -99,6 +125,25 @@ void listExample (){
 
 
 void MapExample (){
+  /*
+  映射(Maps)是无序的键值对：
+
+    常用属性：
+        keys            获取所有的key值
+        values          获取所有的value值
+        isEmpty         是否为空
+        isNotEmpty      是否不为空
+    常用方法:
+        remove(key)     删除指定key的数据
+        addAll({...})   合并映射  给映射内增加属性
+        containsValue   查看映射内的值  返回true/false
+        forEach   
+        map    每个元素都进行操作
+        where  返回满足条件的结果
+        any 
+        every  每一个都要满足条件
+*/
+
   // 创建Map 
   var language = {'fisrt':'dart', 'second':'java'};
   // 创建不可变的 Map
@@ -125,7 +170,7 @@ void MapExample (){
   map['third'] = 'key';
   print(map);         // 输出结果：{fisrt: dart, second: java, third: key}
 
-  // 循环打印 代码提示：Map.forEach((String, String) → void f) → void
+  // 循环打印 代码提示：Map.forEach((String, String) → void fun) → void
   map.forEach( (key2, value) =>  getMap(key2, value) );
 }
 
@@ -133,3 +178,87 @@ void MapExample (){
 void getMap(key, value){
   print("key:${key}, value:${value}");
 }
+
+
+//------------------类型判断---------------- 
+void typeJudge(){
+  var str673=123;
+
+  if(str673 is String){
+    print('是string类型');
+  }else if(str673 is int){
+
+    print('int');
+  }else{
+    print('其他类型');
+  }
+}
+
+
+//算数运算符
+void count1(){
+
+  int a=13;
+  int b=5;
+
+  print(a+b);   //加
+  print(a-b);   //减
+  print(a*b);   //乘
+  print(a/b);   //除
+  print(a%b);   //其余
+  print(a~/b);  //取整
+
+  var c=a*b;
+  print('--------');
+  print(c);
+}
+
+//关系运算符
+void count2(){
+  //  ==    ！=   >    <    >=    <=
+
+  int a=5;
+  int b=3;
+  print(a==b);   //判断是否相等
+  print(a!=b);   //判断是否不等
+  print(a>b);   //判断是否大于
+  print(a<b);   //判断是否小于
+  print(a>=b);   //判断是否大于等于
+  print(a<=b);   //判断是否小于等于
+
+
+  if(a>b){
+    print('a大于b');
+  }else{
+    print('a小于b');
+  }
+}
+
+//逻辑运算符
+void count3() {
+  //与：&&   或||  取反!
+}
+
+
+//赋值运算符 
+void count4(){
+  //基础赋值运算符
+  double a = 10.0;
+
+  //例子 nqs??=23   表示如果b为空，把23赋值给nqs
+  var nqs;
+  nqs ??= 23;//nqs为23
+
+
+  var jjj=11;
+  var kkk = jjj??999;//结果为11
+
+
+  //2.复合赋值运算符
+  a+=10;
+  a-=2;
+  a*=3;
+  a/=4.0;
+  a%=2;
+}
+

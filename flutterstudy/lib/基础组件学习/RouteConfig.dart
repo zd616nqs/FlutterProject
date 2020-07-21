@@ -4,21 +4,21 @@ import 'package:flutter/material.dart';
 
 
 import '1.0 常用类型和基本定义.dart';
-import '1.1 Material、Scaffold介绍.dart';
-import '1.2 TextWidget文本.dart';
-import '1.3 ImageWidget图片.dart';
-import '1.4.Container、decoration详解.dart';
-import '1.5 ListView.dart';
-import '1.6 GridView.dart';
-import '1.7 RowWidget.dart';
-import '1.8 ColumnWidget.dart';
-import '1.9 StackWidget.dart';
-import '1.10 CardWidget.dart';
-import '2.1 AppBar、TabBar.dart';
-import '2.2 Drawer抽屉.dart';
-import '2.3 BottomNavigationBar底部导航栏.dart';
-import '3.1 页面跳转导航.dart';
-import '3.2 页面间传值回调.dart';
+import '2.1 Material、Scaffold介绍.dart';
+import '2.2 TextWidget文本.dart';
+import '2.3 ImageWidget图片.dart';
+import '3.2.Container、decoration详解.dart';
+import '3.1 ListView.dart';
+import '3.3 GridView.dart';
+import '3.4 RowWidget.dart';
+import '3.5 ColumnWidget.dart';
+import '3.7 StackWidget.dart';
+import '3.8 CardWidget.dart';
+import '2.4 AppBar、TabBar.dart';
+import '2.5 Drawer抽屉.dart';
+import '2.6 BottomNavigationBar底部导航栏.dart';
+import '4.1 页面跳转导航.dart';
+import '4.2 页面间传值回调.dart';
 
 
 class BaseWidgetStudy extends StatelessWidget {
@@ -40,9 +40,9 @@ class BaseWidgetStudy extends StatelessWidget {
     // return GridViewExample(); //网格视图
     // return RowExample(); //横向布局 rowWidget组件 
     // return ColumnExample(); //纵向布局 columnWidget
-    // return StackExample(); //层叠布局 stackWidget 
+    return StackExample(); //层叠布局 stackWidget 
     // return CardExample(); //卡片布局 cardView 
     // return PushAndPopExample(); //页面跳转跳回
-    return PushWithPopWithCallbackExample(); //页面间传值、回调
+    // return PushWithPopWithCallbackExample(); //页面间传值、回调
   }
 }

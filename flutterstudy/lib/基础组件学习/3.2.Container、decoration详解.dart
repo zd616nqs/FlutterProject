@@ -44,7 +44,13 @@ class ContainerExample  extends StatelessWidget {
             padding: EdgeInsets.only(top: 15.0),//child组件相对于container的内边距
             margin: EdgeInsets.only(left: 10.0),//外边距
 
-            
+            //------transform运动-------
+            transform: Matrix4.rotationZ(0.3),//旋转
+            // transform: Matrix4.translationValues(100, 0, 0),//位移
+            // transform: Matrix4.diagonal3Values(1.2, 1, 1),//缩放
+
+
+
 
             //////////////////三、decoration装饰器//////////////////////////
             //*** decoration在child组件的后面面绘制

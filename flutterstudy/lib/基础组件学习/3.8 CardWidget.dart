@@ -17,6 +17,7 @@ class Card111 extends StatelessWidget {
   Widget build(BuildContext context){
 
     var cardView = Card(
+      margin: EdgeInsets.all(15 ),
       child: Column(
         children: <Widget>[
           new ListTile(
