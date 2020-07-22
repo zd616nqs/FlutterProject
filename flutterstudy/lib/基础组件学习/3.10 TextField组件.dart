@@ -89,23 +89,34 @@ class TFExample222 extends StatefulWidget {
 
 class _TFExample222State extends State<TFExample222> {
 
-  var userName = new TextEditingController();
+  var _tfEditingController = new TextEditingController();
+  @override
+  void dispose() {
+    _tfEditingController.dispose();//注销时销毁控制器
+    super.dispose();
+    
+  }
+
   @override
   void initState() { 
     super.initState();
-    userName.text = "初始值";
+    _tfEditingController.text = "初始值";
+    _tfEditingController.addListener(()=>{
+
+    });
   }
+  
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal:10.0),
       child: TextField(
-        controller: this.userName,
+        controller: this._tfEditingController,
         onChanged: (value){
-          this.userName.text = value;
+          this._tfEditingController.text = value;
         },
         onEditingComplete: (()=>{
-          // this.userName.
+
         }),
         decoration: InputDecoration(
           //----占位符-----
