@@ -104,6 +104,7 @@ class TextWidgetExample extends StatelessWidget {
                           fontWeight: FontWeight.normal,
                         )
                       ),
+                      
                     ]
                   ),
                 )

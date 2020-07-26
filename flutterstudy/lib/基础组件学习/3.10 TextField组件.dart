@@ -73,7 +73,9 @@ class Test1 extends StatelessWidget {
             //----边框-------
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
-                borderSide: BorderSide(color: Colors.green[300], width: 10.0))),
+                borderSide: BorderSide(color: Colors.green[300], width: 10.0)
+            )
+        ),
       ),
     );
   }
@@ -108,22 +110,25 @@ class _TFExample222State extends State<TFExample222> {
   
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal:10.0),
-      child: TextField(
-        controller: this._tfEditingController,
-        onChanged: (value){
-          this._tfEditingController.text = value;
-        },
-        onEditingComplete: (()=>{
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal:10.0),
+        child: TextField(
+          controller: this._tfEditingController,
+          onChanged: (value){
+            this._tfEditingController.text = value;
+          },
+          onEditingComplete: (()=>{
 
-        }),
-        decoration: InputDecoration(
-          //----占位符-----
-          hintText: "请输入文字",
-          hintStyle: TextStyle(color: Colors.orange),
+          }),
+          decoration: InputDecoration(
+            //----占位符-----
+            hintText: "请输入文字",
+            hintStyle: TextStyle(color: Colors.orange),
+          )
         )
-      )
+      ),
     );
   }
 }
