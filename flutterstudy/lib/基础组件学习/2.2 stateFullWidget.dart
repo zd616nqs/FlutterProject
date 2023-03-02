@@ -14,7 +14,7 @@ class StateFullExample extends StatelessWidget {
 }
 
 class Nqs111 extends StatefulWidget {
-  Nqs111({Key key}) : super(key: key);
+  Nqs111({Key? key}) : super(key: key);
 
   @override
   _Nqs111State createState() => _Nqs111State();
@@ -45,15 +45,15 @@ class _Nqs111State extends State<Nqs111> {
 }
 
 class Nqs222 extends StatefulWidget {
-  Nqs222({Key key}) : super(key: key);
+  Nqs222({Key? key}) : super(key: key);
 
   @override
   _Nqs222State createState() => _Nqs222State();
 }
 
 class _Nqs222State extends State<Nqs222> {
-  List listData = new List();
-  @override 
+  List listData = [];
+  @override
   Widget build(BuildContext context) {
     return ListView(
       children: <Widget>[
@@ -83,7 +83,8 @@ class _Nqs222State extends State<Nqs222> {
             child: Text("删除"),
             onPressed: () {
               this.setState(() {
-                this.listData.removeRange(this.listData.length-1, this.listData.length);
+                this.listData.removeRange(
+                    this.listData.length - 1, this.listData.length);
               });
             }),
       ],

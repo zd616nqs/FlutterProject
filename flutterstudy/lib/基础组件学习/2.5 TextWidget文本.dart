@@ -48,7 +48,7 @@ class TextWidgetExample extends StatelessWidget {
                 //---------1.使用系统样式---------
                 Text(
                   '第一条数据',
-                  style:Theme.of(context).accentTextTheme.display1
+                  style:Theme.of(context).textTheme.headline1
                   // style: Theme.of(context).textTheme.subtitle,
                 ),
                 

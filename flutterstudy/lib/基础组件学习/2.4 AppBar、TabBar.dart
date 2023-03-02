@@ -44,9 +44,8 @@ class AppBarExample extends StatelessWidget {
 
 //tab有三个控件: TabBar标签栏  TabView标签视图  TabController标签控制器
 
-
 class TabBarExample extends StatefulWidget {
-  TabBarExample({Key key}) : super(key: key);
+  TabBarExample({Key? key}) : super(key: key);
 
   @override
   _TabBarExampleState createState() => _TabBarExampleState();
@@ -99,7 +98,7 @@ class _TabBarExampleState extends State<TabBarExample> {
               indicatorSize: TabBarIndicatorSize.label,
               indicatorWeight: 5,
               isScrollable: true,
-              
+
               tabs: <Widget>[
                 Tab(icon: Icon(Icons.local_mall), text: "第1个"),
                 Tab(icon: Icon(Icons.local_bar), text: "第2个"),
@@ -129,76 +128,71 @@ class _TabBarExampleState extends State<TabBarExample> {
   }
 }
 
-
-
-
-
 //自定义一个tabController
 class TabBarExample222 extends StatefulWidget {
-  TabBarExample222({Key key}) : super(key: key);
+  TabBarExample222({Key? key}) : super(key: key);
 
   @override
   _TabBarExample222State createState() => _TabBarExample222State();
 }
 
-class _TabBarExample222State extends State<TabBarExample222> with SingleTickerProviderStateMixin{
-  TabController _tabController;
+class _TabBarExample222State extends State<TabBarExample222>
+    with SingleTickerProviderStateMixin {
+  TabController? _tabController;
 
   @override
-  void initState() { 
+  void initState() {
     super.initState();
     _tabController = new TabController(length: 7, vsync: this);
-    _tabController.addListener((){
+    _tabController?.addListener(() {
       //监听选中下标，可以setState操作
-      print("选中了${_tabController.index+1}");
+      print("选中了${_tabController!.index + 1}");
     });
   }
+
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-        title: Text("牛牛牛"),
-        bottom: TabBar(
-          //设置controller
-          controller: this._tabController,
-          //设置tabs
-          tabs: <Widget>[
-                Tab(icon: Icon(Icons.local_mall), text: "第1个"),
-                Tab(icon: Icon(Icons.local_bar), text: "第2个"),
-                Tab(icon: Icon(Icons.local_florist), text: "第3个"),
-                Tab(icon: Icon(Icons.local_atm), text: "第4个"),
-                Tab(icon: Icon(Icons.local_cafe), text: "第5个"),
-                Tab(icon: Icon(Icons.local_car_wash), text: "第6个"),
-                Tab(icon: Icon(Icons.location_disabled), text: "第7个"),
-              ],
-          //设置选中、未选中颜色
-          labelColor: Colors.black,
-          unselectedLabelColor: Colors.grey,
-          //指示器颜色、长度、高度
-          indicatorColor: Colors.red,
-          indicatorSize: TabBarIndicatorSize.label,
-          indicatorWeight: 5,
-          isScrollable: true,
-        ),
-        
-      ),
-      //------body初始化对应7个TabBarView视图------
-      body: TabBarView(
+          title: Text("牛牛牛"),
+          bottom: TabBar(
+            //设置controller
             controller: this._tabController,
-            children: <Widget>[
-              Icon(Icons.local_mall, size: 150.0, color: Colors.black12),
-              Icon(Icons.local_bar, size: 150.0, color: Colors.black12),
-              Icon(Icons.local_florist, size: 150.0, color: Colors.black12),
-              Icon(Icons.local_atm, size: 150.0, color: Colors.black12),
-              Icon(Icons.local_cafe, size: 150.0, color: Colors.black12),
-              Icon(Icons.local_car_wash, size: 150.0, color: Colors.black12),
-              Icon(Icons.location_disabled, size: 150.0, color: Colors.black12)
+            //设置tabs
+            tabs: <Widget>[
+              Tab(icon: Icon(Icons.local_mall), text: "第1个"),
+              Tab(icon: Icon(Icons.local_bar), text: "第2个"),
+              Tab(icon: Icon(Icons.local_florist), text: "第3个"),
+              Tab(icon: Icon(Icons.local_atm), text: "第4个"),
+              Tab(icon: Icon(Icons.local_cafe), text: "第5个"),
+              Tab(icon: Icon(Icons.local_car_wash), text: "第6个"),
+              Tab(icon: Icon(Icons.location_disabled), text: "第7个"),
             ],
-          ),    
+            //设置选中、未选中颜色
+            labelColor: Colors.black,
+            unselectedLabelColor: Colors.grey,
+            //指示器颜色、长度、高度
+            indicatorColor: Colors.red,
+            indicatorSize: TabBarIndicatorSize.label,
+            indicatorWeight: 5,
+            isScrollable: true,
+          ),
+        ),
+        //------body初始化对应7个TabBarView视图------
+        body: TabBarView(
+          controller: this._tabController,
+          children: <Widget>[
+            Icon(Icons.local_mall, size: 150.0, color: Colors.black12),
+            Icon(Icons.local_bar, size: 150.0, color: Colors.black12),
+            Icon(Icons.local_florist, size: 150.0, color: Colors.black12),
+            Icon(Icons.local_atm, size: 150.0, color: Colors.black12),
+            Icon(Icons.local_cafe, size: 150.0, color: Colors.black12),
+            Icon(Icons.local_car_wash, size: 150.0, color: Colors.black12),
+            Icon(Icons.location_disabled, size: 150.0, color: Colors.black12)
+          ],
+        ),
       ),
     );
-    
-    
   }
 }

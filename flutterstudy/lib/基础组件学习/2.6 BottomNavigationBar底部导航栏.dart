@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 
 class BottomNavgationBarDemo extends StatefulWidget {
-  BottomNavgationBarDemo({Key key}) : super(key: key);
+  BottomNavgationBarDemo({Key? key}) : super(key: key);
 
   @override
   _BottomNavgationBarDemoState createState() => _BottomNavgationBarDemoState();
 }
 
 class _BottomNavgationBarDemoState extends State<BottomNavgationBarDemo> {
-
   //当前选择下标
   int _currentIndex = 0;
   //页面数据源
@@ -33,7 +32,7 @@ class _BottomNavgationBarDemoState extends State<BottomNavgationBarDemo> {
         appBar: new AppBar(title: new Text("标题")),
         body: _pages[_currentIndex],
         bottomNavigationBar: BottomNavigationBar(
-        /*
+          /*
           items        List<BottomNavigationBarItem> 底 部 导 航 条按钮集合
           iconSize     icon大小
           currentIndex 默认选中第几个
@@ -42,41 +41,37 @@ class _BottomNavgationBarDemoState extends State<BottomNavgationBarDemo> {
           type         BottomNavigationBarType.fixed  BottomNavigationBarType.shifting
       */
 
-        //当item超过3个时，会有显示问题，需要设置对应的type使其正常显示
-        type: BottomNavigationBarType.fixed,
-        //item勾选颜色，fixedColor设置之后有同样效果
-        selectedItemColor: Colors.green,
-        //当前选中下标
-        currentIndex: _currentIndex,
-        //选中的事件
-        onTap: _onTapHandel,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text('首页'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.explore),
-            title: Text('探索'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.history),
-            title: Text('历史'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle),
-            title: Text('我的'),
-          )
-        ],
-      ),
+          //当item超过3个时，会有显示问题，需要设置对应的type使其正常显示
+          type: BottomNavigationBarType.fixed,
+          //item勾选颜色，fixedColor设置之后有同样效果
+          selectedItemColor: Colors.green,
+          //当前选中下标
+          currentIndex: _currentIndex,
+          //选中的事件
+          onTap: _onTapHandel,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: '首页',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.explore),
+              label: '探索',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.history),
+              label: '历史',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle),
+              label: '我的',
+            )
+          ],
+        ),
       ),
     );
   }
 }
-
-
-
-
 
 class PageA extends StatelessWidget {
   @override
@@ -110,6 +105,7 @@ class PageC extends StatelessWidget {
     );
   }
 }
+
 class PageD extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

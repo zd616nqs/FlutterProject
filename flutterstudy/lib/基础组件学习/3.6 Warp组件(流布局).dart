@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class WrapExample extends StatelessWidget {
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: new AppBar(title: new Text("标题")),
@@ -12,10 +12,10 @@ class WrapExample extends StatelessWidget {
 }
 
 class Wrap111 extends StatelessWidget {
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     var wrap = Container(
       width: 300,
-      height:600,
+      height: 600,
       color: Colors.pink,
       child: Wrap(
         /*
@@ -52,16 +52,15 @@ class Wrap111 extends StatelessWidget {
 class MyBtn extends StatelessWidget {
   final String title;
 
-  const MyBtn(this.title,{Key key}) : super(key: key);
+  const MyBtn(this.title, {Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return RaisedButton(
       child: Text(title),
       textColor: Colors.red,
-      onPressed: (){
+      onPressed: () {
         print("点击了${title}");
       },
     );
   }
-  
 }

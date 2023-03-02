@@ -81,10 +81,10 @@ class GridViewStaticExample extends StatelessWidget {
 
 //-------gridView动态表格==》gridview.builder--------
 class GridViewDynamicExample extends StatelessWidget {
-  const GridViewDynamicExample({Key key}) : super(key: key);
+  const GridViewDynamicExample({Key? key}) : super(key: key);
 
   _getData() {
-    List data = new List();
+    List data = [];
     data.addAll([
       Image.network(
           'https://p1.meituan.net/movie/c63849c7a9de360a7b192bc322792a111705236.jpg@160w_220h_1e_1c',
@@ -132,16 +132,11 @@ class GridViewDynamicExample extends StatelessWidget {
   }
 }
 
-
-
-
-
 //------gridView老版写法------
 class GridVersionOld extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView(
-      
       /* 
       gridDelegate：(SliverGridDelegate)
         1.SliverGridDelegateWithFixedCrossAxisCount 常用

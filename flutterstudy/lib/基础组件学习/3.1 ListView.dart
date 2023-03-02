@@ -55,15 +55,14 @@ class DynamicListView extends StatelessWidget {
 class ListView111 extends StatelessWidget {
   //数据源1
   final List<String> items;
-  ListView111({Key key, this.items}) : super(key: key); //接收参数
+  ListView111({Key? key, required this.items}) : super(key: key); //接收参数
 
   //数据源2
   List<Widget> _generateData() {
-    List<Widget> dataList = new List();
+    List<Widget> dataList = [];
     for (var i = 0; i < 20; i++) {
       dataList.add(ListTile(
         title: Text("牛牛${i}"),
-        
       ));
     }
     return dataList;

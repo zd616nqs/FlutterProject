@@ -20,8 +20,7 @@ class TextFieldExample extends StatelessWidget {
               TFExample(),
               TFExample222(),
             ],
-            )
-          ),
+          )),
     );
   }
 }
@@ -47,7 +46,6 @@ class TFExample extends StatelessWidget {
           TextField(),
           SizedBox(height: 40),
           Test1(),
-        
         ],
       ),
     );
@@ -55,7 +53,7 @@ class TFExample extends StatelessWidget {
 }
 
 class Test1 extends StatelessWidget {
-  const Test1({Key key}) : super(key: key);
+  const Test1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -73,9 +71,8 @@ class Test1 extends StatelessWidget {
             //----边框-------
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
-                borderSide: BorderSide(color: Colors.green[300], width: 10.0)
-            )
-        ),
+                borderSide:
+                    BorderSide(color: Colors.green[300]!, width: 10.0))),
       ),
     );
   }
@@ -83,52 +80,44 @@ class Test1 extends StatelessWidget {
 
 //使用TextEditingController
 class TFExample222 extends StatefulWidget {
-  TFExample222({Key key}) : super(key: key);
+  TFExample222({Key? key}) : super(key: key);
 
   @override
   _TFExample222State createState() => _TFExample222State();
 }
 
 class _TFExample222State extends State<TFExample222> {
-
   var _tfEditingController = new TextEditingController();
   @override
   void dispose() {
-    _tfEditingController.dispose();//注销时销毁控制器
+    _tfEditingController.dispose(); //注销时销毁控制器
     super.dispose();
-    
   }
 
   @override
-  void initState() { 
+  void initState() {
     super.initState();
     _tfEditingController.text = "初始值";
-    _tfEditingController.addListener(()=>{
-
-    });
+    _tfEditingController.addListener(() => {});
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal:10.0),
-        child: TextField(
-          controller: this._tfEditingController,
-          onChanged: (value){
-            this._tfEditingController.text = value;
-          },
-          onEditingComplete: (()=>{
-
-          }),
-          decoration: InputDecoration(
-            //----占位符-----
-            hintText: "请输入文字",
-            hintStyle: TextStyle(color: Colors.orange),
-          )
-        )
-      ),
+          padding: EdgeInsets.symmetric(horizontal: 10.0),
+          child: TextField(
+              controller: this._tfEditingController,
+              onChanged: (value) {
+                this._tfEditingController.text = value;
+              },
+              onEditingComplete: (() => {}),
+              decoration: InputDecoration(
+                //----占位符-----
+                hintText: "请输入文字",
+                hintStyle: TextStyle(color: Colors.orange),
+              ))),
     );
   }
 }
